@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    testOptions.unitTests.includeAndroidResources = true
+
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -17,6 +19,8 @@ dependencies {
     testImplementation rootProject.ext.junit
     testImplementation rootProject.ext.roboelectric
 
+    api rootProject.ext.androidxAppCompat
+    api rootProject.ext.androidxFragment
     api rootProject.ext.androidxAnnotations
     api kotlinStd
 
